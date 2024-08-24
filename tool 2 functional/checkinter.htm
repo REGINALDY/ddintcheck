@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacist Drug Interaction Checker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Drug Interaction Checker</h1>
+        <div id="drug-inputs">
+            <div class="input-group">
+                <input type="text" class="drug-input" placeholder="Enter drug name" oninput="showSuggestions(this)">
+                <button class="remove-drug">-</button>
+                <ul class="suggestions-list"></ul>
+            </div>
+        </div>
+        <button id="add-drug">+</button>
+        <button id="reverse-drugs">Reset</button>
+        <button id="check-interaction">GO</button>
+        <div id="results"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
