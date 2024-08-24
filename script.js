@@ -145,18 +145,17 @@ function fetchDrugInteractions(drugs) {
                     .replace(/Drug 1/g, drug1)
                     .replace(/Drug 2/g, drug2);
 
-                interactionResults.push(
-                    `Interaction found between ${drug1} and ${drug2}:
-                    \n- **Interaction Type**: ${interactionType}
-                    \n- **Clinical Significance**: ${interaction.clinicalSignificance}
-                    \n- **Management**: ${interaction.management}`
-                );
+                interactionResults.push(`
+                    <div class="interaction-type">Interaction Type: ${interactionType}</div>
+                    <div class="clinical-significance">Clinical Significance: ${interaction.clinicalSignificance}</div>
+                    <div class="management">Management: ${interaction.management}</div>
+                `);
             }
         }
     }
 
     if (interactionResults.length > 0) {
-        document.getElementById('results').innerText = interactionResults.join("\n\n");
+        document.getElementById('results').innerHTML = interactionResults.join("<hr>");
     } else {
         document.getElementById('results').innerText = "No known interactions found.";
     }
