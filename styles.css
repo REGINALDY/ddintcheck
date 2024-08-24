@@ -1,0 +1,137 @@
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #FFDEE9 0%, #B5FFFC 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        color: #333;
+    }
+
+    .container {
+        background: rgba(255, 255, 255, 0.85);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        width: 400px;
+        max-width: 90%;
+        text-align: center;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+        font-size: 28px;
+        color: #2C3E50;
+    }
+
+    .input-group {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .drug-input {
+        width: calc(100% - 50px);
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        outline: none;
+        font-size: 16px;
+        transition: border-color 0.3s;
+    }
+
+    .drug-input:focus {
+        border-color: #3498db;
+    }
+
+    .remove-drug {
+        margin-left: 10px;
+        padding: 10px;
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+
+    .remove-drug:hover {
+        background-color: #c0392b;
+    }
+
+    .suggestions-list {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background: white;
+        border: 1px solid #ccc;
+        border-top: none;
+        max-height: 150px;
+        overflow-y: auto;
+        z-index: 1000;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .suggestions-list li {
+        padding: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .suggestions-list li:hover {
+        background-color: #f0f0f0;
+    }
+
+    #add-drug, #reverse-drugs, #check-interaction {
+        margin-top: 10px;
+        padding: 12px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+        width: 100%;
+    }
+
+    #add-drug:hover, #reverse-drugs:hover, #check-interaction:hover {
+        background-color: #2980b9;
+    }
+
+    #reverse-drugs {
+        background-color: #f39c12;
+    }
+
+    #reverse-drugs:hover {
+        background-color: #e67e22;
+    }
+
+    #check-interaction {
+        background-color: #2ecc71;
+    }
+
+    #check-interaction:hover {
+        background-color: #27ae60;
+    }
+
+    #results {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #ecf0f1;
+        border-radius: 8px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #2C3E50;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+</style>
