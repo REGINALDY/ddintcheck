@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pharmacist Drug Interaction Checker</title>
+    <title>Drug Interaction Checker</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,7 +18,7 @@
 
         .container {
             background: rgba(255, 255, 255, 0.85);
-            padding: 20px;
+            padding: 30px;
             border-radius: 12px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
             width: 400px;
@@ -28,7 +28,7 @@
 
         h1 {
             margin-bottom: 20px;
-            font-size: 24px;
+            font-size: 28px;
             color: #2C3E50;
         }
 
@@ -40,7 +40,7 @@
         }
 
         .drug-input {
-            width: 100%;
+            width: calc(100% - 50px);
             padding: 10px;
             border: 2px solid #ccc;
             border-radius: 8px;
@@ -133,12 +133,32 @@
         #results {
             margin-top: 20px;
             padding: 15px;
-            background-color: #ecf0f1;
+            background-color: #f7f7f7;
             border-radius: 8px;
             font-size: 16px;
             line-height: 1.5;
             color: #2C3E50;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .interaction-type {
+            font-family: 'Georgia', serif;
+            color: #e74c3c; /* Red for emphasis */
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .clinical-significance {
+            font-family: 'Courier New', monospace;
+            color: #3498db; /* Blue for contrast */
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .management {
+            font-family: 'Verdana', sans-serif;
+            color: #27ae60; /* Green for positive tone */
+            font-weight: bold;
         }
     </style>
 </head>
