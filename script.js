@@ -42,7 +42,7 @@ async function loadDrugData(url) {
 }
 
 // Load the drug interaction data from the provided URL
-loadDrugData('https://fuchsia-gabbi-57.tiiny.site/');
+loadDrugData('https://reginaldy.github.io/db/');
 
 // Initialize the drug names array
 let drugNames = [];
